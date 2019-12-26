@@ -10,7 +10,7 @@ public class FabricaProducto {
 
 	public Producto crear(ComandoProducto comandoProducto) {		
 		return new Producto(comandoProducto.getCodigo(), comandoProducto.getDescripcion(), comandoProducto.getGrupo(),
-				comandoProducto.getIvaVenta(), comandoProducto.getLista1(), comandoProducto.getLista2(), comandoProducto.getPrecioCompra());
+				comandoProducto.getIvaVenta(), comandoProducto.getPrecioVenta(), comandoProducto.getPrecioCompra());
 	}
 	
 }

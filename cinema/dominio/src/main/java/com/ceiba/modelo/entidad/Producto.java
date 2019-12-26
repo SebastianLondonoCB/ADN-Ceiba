@@ -14,7 +14,7 @@ public class Producto {
 	private static final String LA_DESCRIPCION_ES_UN_DATO_OBLIGATORIO = "La descripción es un dato obligatorio.";
 	private static final String EL_IVA_ES_UN_DATO_OBLIGATORIO = "El iva es un dato obligatorio.";
 	private static final String LA_LISTA_1_ES_UN_DATO_OBLIGATORIO = "La lista 1 es un dato obligatorio.";
-	private static final String LA_LISTA_2_ES_UN_DATO_OBLIGATORIO = "La lista 2 es un dato obligatorio.";
+	
 	private static final String EL_PRECIO_DE_COMPRA_ES_UN_DATO_OBLIGATORIO = "El precio de compra es un dato obligatorio.";
 
 	// Establecemos atributos
@@ -22,18 +22,15 @@ public class Producto {
 	private String descripcion;
 	private String grupo;
 	private Integer ivaVenta;
-	private Double lista1;
-	private Double lista2;
+	private Double precioVenta;
 	private Double precioCompra;
 
-	public Producto(String codigo, String descripcion, String grupo, Integer ivaVenta, Double lista1, Double lista2,
-			Double precioCompra) {
+	public Producto(String codigo, String descripcion, String grupo, Integer ivaVenta, Double lista1, Double precioCompra) {
 
 		ValidadorArgumento.validarObligatorio(codigo, EL_CODIGO_ES_UN_DATO_OBLIGATORIO);
 		ValidadorArgumento.validarObligatorio(descripcion, LA_DESCRIPCION_ES_UN_DATO_OBLIGATORIO);
 		ValidadorArgumento.validarObligatorio(ivaVenta, EL_IVA_ES_UN_DATO_OBLIGATORIO);
 		ValidadorArgumento.validarObligatorio(lista1, LA_LISTA_1_ES_UN_DATO_OBLIGATORIO);
-		ValidadorArgumento.validarObligatorio(lista2, LA_LISTA_2_ES_UN_DATO_OBLIGATORIO);
 		ValidadorArgumento.validarObligatorio(precioCompra, EL_PRECIO_DE_COMPRA_ES_UN_DATO_OBLIGATORIO);
 
 		ValidadorArgumento.validarLongitud(descripcion, TAMANO_MINIMO_DESCRIPCION,
@@ -44,8 +41,7 @@ public class Producto {
 		this.descripcion = descripcion;
 		this.grupo = grupo;
 		this.ivaVenta = ivaVenta;
-		this.lista1 = lista1;
-		this.lista2 = lista2;
+		this.precioVenta = lista1;
 		this.precioCompra = precioCompra;
 	}
 
@@ -65,12 +61,8 @@ public class Producto {
 		return ivaVenta;
 	}
 
-	public Double getLista1() {
-		return lista1;
-	}
-
-	public Double getLista2() {
-		return lista2;
+	public Double getPrecioVenta() {
+		return precioVenta;
 	}
 
 	public Double getPrecioCompra() {

@@ -12,8 +12,7 @@ public class ComandoProducto {
 	private String descripcion;
 	private String grupo;
 	private Integer ivaVenta;
-	private Double lista1;
-	private Double lista2;
+	private Double precioVenta;
 	private Double precioCompra;
 }
 

@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import com.ceiba.modelo.dto.DtoTercero;
 
-public interface DaoTercero {
+public interface DaoCliente {
 
 	/**
 	 * Permite listar los terceros

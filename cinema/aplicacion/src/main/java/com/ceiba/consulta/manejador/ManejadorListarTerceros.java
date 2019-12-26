@@ -5,14 +5,14 @@ import java.util.Collection;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.modelo.dto.DtoTercero;
-import com.ceiba.puerto.dao.DaoTercero;
+import com.ceiba.puerto.dao.DaoCliente;
 
 @Component
 public class ManejadorListarTerceros {
 
-	private final DaoTercero daoTercero;
+	private final DaoCliente daoTercero;
 	
-	public ManejadorListarTerceros(DaoTercero daoTercero) {
+	public ManejadorListarTerceros(DaoCliente daoTercero) {
 		this.daoTercero = daoTercero;
 	}
 	

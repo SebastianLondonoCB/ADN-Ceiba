@@ -22,7 +22,7 @@ public class ProductoDataStore {
 	static {		
 		productos = new ConcurrentHashMap<>();
 		productos.put(UUID.randomUUID().toString(), new Producto("01", "ESTUCHE SILI CONCASE VERDE", "ESTUCHES",
-					19, 40000.0, 38000.0, 20000.0));	
+					19, 40000.0, 20000.0));	
 	} 
 	
 	public Collection<Producto> get() {
@@ -32,8 +32,7 @@ public class ProductoDataStore {
 	public Collection<DtoProducto> getAsDto() {
 		return productos.values().stream()
 				  				 .map(producto -> new DtoProducto(producto.getCodigo(), producto.getDescripcion(), producto.getGrupo(),
-				  						producto.getIvaVenta(), producto.getLista1(), producto.getLista2(), 
-				  						producto.getPrecioCompra())).collect(Collectors.toList());
+				  						producto.getIvaVenta(), producto.getPrecioVenta(), producto.getPrecioCompra())).collect(Collectors.toList());
 	}
 	
 	public void put(Producto producto) {

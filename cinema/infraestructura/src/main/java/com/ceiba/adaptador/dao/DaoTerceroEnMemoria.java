@@ -6,10 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import com.ceiba.adaptador.datastore.TerceroDataStore;
 import com.ceiba.modelo.dto.DtoTercero;
-import com.ceiba.puerto.dao.DaoTercero;
+import com.ceiba.puerto.dao.DaoCliente;
 
 @Repository
-public class DaoTerceroEnMemoria implements DaoTercero {
+public class DaoTerceroEnMemoria implements DaoCliente {
 	
 	/**
 	 * Solo se debe usar data store para pruebas en un contexto real deberia usar una bd
