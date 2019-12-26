@@ -13,7 +13,7 @@ pipeline {
   //Una sección que define las herramientas \u201Cpreinstaladas\u201D en Jenkins
   tools {
     jdk 'JDK8_Centos' //Preinstalada en la Configuración del Master
-    gradle 'Gradle4.5_Centos' //Preinstalada en la Configuración del Master
+    gradle 'Gradle5.6_Centos' //Preinstalada en la Configuración del Master
   }
 
   //Aquí comienzan los \u201Citems\u201D del Pipeline
@@ -62,7 +62,7 @@ pipeline {
 		steps{
 			echo "------------>Build<------------"
 			//Construir sin tarea test que se ejecut� previamente
-			sh 'gradle --b ./cinema/infraestructura/build.gradle build -x test'
+			sh 'gradle --b ./cinema/infraestructura/build.gradle test'
 		}
 	}
   }

@@ -8,8 +8,8 @@ public class Tercero {
 	private static final int TAMANO_MINIMO_APELLIDOS = 3;
 
 	// Cantidad minimas
-	private static final String EL_NOMBRE_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener mínimo %s letras.";
-	private static final String EL_APELLIDO_DEBE_TENER_MINIMO_LETRAS = "El apellido debe tener mínimo %s letras.";
+	private static final String EL_NOMBRE_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener un minimo de letras.";
+	private static final String EL_APELLIDO_DEBE_TENER_MINIMO_LETRAS = "El apellido debe tener un minimo de letras.";
 
 	// Datos obligatorios
 	private static final String LA_IDENTIFICACION_ES_UN_DATO_OBLIGATORIO = "La identificaci�n es un dato obligatorio.";

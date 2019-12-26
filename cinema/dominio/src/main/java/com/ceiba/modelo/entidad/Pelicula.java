@@ -3,7 +3,7 @@ package com.ceiba.modelo.entidad;
 public class Pelicula {
 
 	private static final int TAMANO_MINIMO_NOMBRE = 4;
-	private static final String EL_NOMBRE_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener mínimo %s letras.";
+	private static final String EL_NOMBRE_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener un minimo de letras.";
 	private static final String EL_NOMBRE_ES_UN_DATO_OBLIGATORIO = "El nombre es un dato obligatorio.";
 	private static final String EL_GENERO_ES_UN_DATO_OBLIGATORIO = "El genero es un dato obligatorio.";
 	private static final String EL_ANIO_ESTRENO_ES_UN_DATO_OBLIGATORIO = "El anio de estreno es un dato obligatorio.";

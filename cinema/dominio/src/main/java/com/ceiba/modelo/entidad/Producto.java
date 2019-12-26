@@ -7,7 +7,7 @@ public class Producto {
 	private static final int TAMANO_MINIMO_DESCRIPCION = 3;
 
 	// Cantidad minimas
-	private static final String LA_DESCRIPCION_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener mínimo %s letras.";
+	private static final String LA_DESCRIPCION_DEBE_TENER_MINIMO_LETRAS = "El nombre debe tener un minimo de letras.";
 
 	// Datos obligatorios
 	private static final String EL_CODIGO_ES_UN_DATO_OBLIGATORIO = "El codigo es un dato obligatorio.";

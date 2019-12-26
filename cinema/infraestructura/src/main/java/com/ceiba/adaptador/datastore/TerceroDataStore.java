@@ -32,7 +32,7 @@ public class TerceroDataStore {
 			e.printStackTrace();
 		} 
 				
-		terceros.put(UUID.randomUUID().toString(),new Tercero("1040756785", "Cédula de ciudadania", "Sebastian", "Londoño Zapata", "VIP",
+		terceros.put(UUID.randomUUID().toString(),new Tercero("1040756785", "Cédula de ciudadania", "Sebastian", "Londono Zapata", "VIP",
 				"3104368735", "sebastianlondonozapata@gmail.com", fechaNacimiento));
 	} 
 	

@@ -33,7 +33,7 @@ public class ComandoControladorPeliculaTest {
         ComandoPelicula comandoPelicula = new ComandoPeliculaTestDataBuilder().build();
 
         // act - assert
-        mocMvc.perform(post("/privada/peliculas")
+        mocMvc.perform(post("/peliculas")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(objectMapper.writeValueAsString(comandoPelicula)))
         		.andExpect(status().isOk());

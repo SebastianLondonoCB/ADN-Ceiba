@@ -8,10 +8,7 @@ import com.ceiba.modelo.entidad.Producto;
 @Component
 public class FabricaProducto {
 
-	public Producto crear(ComandoProducto comandoProducto) {
-		
-		System.out.println("yo veo aver si es real o que");
-		
+	public Producto crear(ComandoProducto comandoProducto) {		
 		return new Producto(comandoProducto.getCodigo(), comandoProducto.getDescripcion(), comandoProducto.getGrupo(),
 				comandoProducto.getIvaVenta(), comandoProducto.getLista1(), comandoProducto.getLista2(), comandoProducto.getPrecioCompra());
 	}

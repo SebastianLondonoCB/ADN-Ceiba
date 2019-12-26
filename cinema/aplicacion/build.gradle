@@ -21,7 +21,7 @@ dependencies {
 }
 
 configurations {
-compileOnly {
-extendsFrom annotationProcessor
-}
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
 }

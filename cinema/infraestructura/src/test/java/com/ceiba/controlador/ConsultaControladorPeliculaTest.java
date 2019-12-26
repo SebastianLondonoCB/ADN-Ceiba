@@ -28,7 +28,7 @@ public class ConsultaControladorPeliculaTest {
         // arrange
 
         // act - assert
-    	mocMvc.perform(get("/privada/peliculas")
+    	mocMvc.perform(get("/peliculas")
     		      .contentType(MediaType.APPLICATION_JSON))
     		      .andExpect(status().isOk())
     		      .andExpect(jsonPath("$", hasSize(1)))
