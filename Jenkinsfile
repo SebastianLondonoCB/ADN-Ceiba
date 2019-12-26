@@ -41,7 +41,6 @@ pipeline {
 	stage('Compile & Unit Tests') {
 		steps{
 			echo "------------>Clean Tests<------------"
-//			sh 'gradle --b ./cinema/infraestructura/build.gradle clean compileJava'
 			sh 'gradle --b ./cinema/infraestructura/build.gradle clean'
 			echo "------------>Unit Tests<------------"
 			sh 'gradle --b ./cinema/infraestructura/build.gradle test'
