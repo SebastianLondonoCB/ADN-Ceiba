@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
-import com.ceiba.modelo.dto.DtoTercero;
-import com.ceiba.modelo.entidad.Tercero;
+import com.ceiba.modelo.dto.DtoCliente;
+import com.ceiba.modelo.entidad.Cliente;
 
 /**
  * Solo se debe usar data store para pruebas en un contexto real deberia usar una bd
@@ -20,7 +20,7 @@ import com.ceiba.modelo.entidad.Tercero;
 @Component
 public class TerceroDataStore {
 
-	private static ConcurrentHashMap<String,Tercero> terceros;
+	private static ConcurrentHashMap<String,Cliente> terceros;
 
 	static {
 		terceros = new ConcurrentHashMap<>();
@@ -32,22 +32,22 @@ public class TerceroDataStore {
 			e.printStackTrace();
 		} 
 				
-		terceros.put(UUID.randomUUID().toString(),new Tercero("1040756785", "Cédula de ciudadania", "Sebastian", "Londono Zapata", "VIP",
+		terceros.put(UUID.randomUUID().toString(),new Cliente("1040756785", "Cédula de ciudadania", "Sebastian", "Londono Zapata", "VIP",
 				"3104368735", "sebastianlondonozapata@gmail.com", fechaNacimiento));
 	} 
 	
-	public Collection<Tercero> get() {
+	public Collection<Cliente> get() {
 		return terceros.values();
 	}
 	
-	public Collection<DtoTercero> getAsDto() {
+	public Collection<DtoCliente> getAsDto() {
 		return terceros.values().stream()
-				  				 .map(tercero -> new DtoTercero(tercero.getIdentificacion(), tercero.getTipoIdentificacion(),
+				  				 .map(tercero -> new DtoCliente(tercero.getIdentificacion(), tercero.getTipoIdentificacion(),
 				  						tercero.getNombre(), tercero.getApellidos(), tercero.getTipoCliente(), tercero.getTelefono(),
 				  						tercero.getEmail(), tercero.getFechaNacimiento())).collect(Collectors.toList());
 	}
 	
-	public void put(Tercero tercero) {
+	public void put(Cliente tercero) {
 		terceros.put(UUID.randomUUID().toString(), tercero);
 	}
 }

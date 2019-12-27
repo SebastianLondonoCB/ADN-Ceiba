@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ceiba.comando.ComandoTercero;
-import com.ceiba.comando.manejador.ManejadorCrearTercero;
+import com.ceiba.comando.ComandoCliente;
+import com.ceiba.comando.manejador.ManejadorCrearCliente;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -16,15 +16,15 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = { "Controlador terceros"})
 public class ComandoControladorTercero {
 
-	private final ManejadorCrearTercero manejadorCrearTercero;
+	private final ManejadorCrearCliente manejadorCrearTercero;
 	
-	public ComandoControladorTercero(ManejadorCrearTercero manejadorCrearTercero) {
+	public ComandoControladorTercero(ManejadorCrearCliente manejadorCrearTercero) {
 		this.manejadorCrearTercero = manejadorCrearTercero;
 	}
 	
 	@PostMapping
 	@ApiOperation("crear")
-	public void crear(@RequestBody ComandoTercero comandoTercero) {
+	public void crear(@RequestBody ComandoCliente comandoTercero) {
 		this.manejadorCrearTercero.ejecutar(comandoTercero);
 	}
 }

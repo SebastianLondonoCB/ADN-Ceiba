@@ -2,13 +2,13 @@ package com.ceiba.puerto.dao;
 
 import java.util.Collection;
 
-import com.ceiba.modelo.dto.DtoCliente;
+import com.ceiba.modelo.dto.DtoFactura;
 
-public interface DaoCliente {
+public interface DaoFactura {
 
 	/**
 	 * Permite listar los terceros
 	 * @return
 	 */
-	Collection<DtoCliente> listar();
+	Collection<DtoFactura> listar();
 }
