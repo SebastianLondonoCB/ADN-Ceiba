@@ -2,6 +2,7 @@ package com.ceiba.controlador;
 
 import java.util.Collection;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,8 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/facturas")
 @Api(tags = { "Controlador facturas"})
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET, RequestMethod.POST})
+
 public class ConsultaControladorFactura {
 	
 	private final ManejadorListarFacturas manejadorListarFacturas;
