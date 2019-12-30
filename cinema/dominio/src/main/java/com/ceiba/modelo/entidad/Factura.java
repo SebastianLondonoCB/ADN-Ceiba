@@ -8,8 +8,8 @@ import com.ceiba.modelo.dto.DtoDetalleFactura;
 public class Factura {
 
 	// Datos obligatorios
-	private static final String EL_SUBTOTAL_DEBE_SER_MAYOR_A_CERO = "El subtotal debe ser mayor a 0";
-	private static final String EL_TOTAL_DEBE_SER_MAYOR_A_CERO = "El total debe ser mayor a 0";
+	private static final String EL_SUBTOTAL_DEBE_SER_MAYOR_A_CERO = "El subtotal debe ser mayor a 0.";
+	private static final String EL_TOTAL_DEBE_SER_MAYOR_A_CERO = "El total debe ser mayor a 0.";
 
 	// Datos obligatorios
 	private static final String EL_ID_DE_FACTURA_ES_UN_DATO_OBLIGATORIO = "El ID de factura es obligatorio.";

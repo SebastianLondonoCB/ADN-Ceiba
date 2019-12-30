@@ -12,13 +12,13 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/terceros")
+@RequestMapping("/clientes")
 @Api(tags = { "Controlador terceros"})
-public class ComandoControladorTercero {
+public class ComandoControladorCliente {
 
 	private final ManejadorCrearCliente manejadorCrearTercero;
 	
-	public ComandoControladorTercero(ManejadorCrearCliente manejadorCrearTercero) {
+	public ComandoControladorCliente(ManejadorCrearCliente manejadorCrearTercero) {
 		this.manejadorCrearTercero = manejadorCrearTercero;
 	}
 	

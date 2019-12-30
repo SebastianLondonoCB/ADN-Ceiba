@@ -17,4 +17,8 @@ public class DtoDetalleFactura {
 	private Double precioTotal;
 	private Double precioCompra;
 	private Double utilidad;
+	
+	public DtoDetalleFactura() {
+		// TODO Auto-generated constructor stub
+	}
 }

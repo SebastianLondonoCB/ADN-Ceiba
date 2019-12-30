@@ -3,9 +3,9 @@ package com.ceiba.modelo.entidad;
 public class DetalleFactura {
 
 	// Datos obligatorios
-	private static final String EL_PRECIO_UNITARIO_DEBE_SER_MAYOR_A_CERO = "El precio unitario debe ser mayor a 0";
-	private static final String LA_CANTIDAD_DEBE_SER_MAYOR_A_CERO = "La cantidad debe ser mayor a 0";
-	private static final String EL_PRECIO_TOTAL_DEBE_SER_MAYOR_A_CERO = "El precio total debe ser mayor a 0";
+	private static final String EL_PRECIO_UNITARIO_DEBE_SER_MAYOR_A_CERO = "El precio unitario debe ser mayor a 0.";
+	private static final String LA_CANTIDAD_DEBE_SER_MAYOR_A_CERO = "La cantidad debe ser mayor a 0.";
+	private static final String EL_PRECIO_TOTAL_DEBE_SER_MAYOR_A_CERO = "El precio total debe ser mayor a 0.";
 
 	// Datos obligatorios
 	private static final String EL_ID_DE_FACTURA_ES_UN_DATO_OBLIGATORIO = "El ID de factura es obligatorio.";

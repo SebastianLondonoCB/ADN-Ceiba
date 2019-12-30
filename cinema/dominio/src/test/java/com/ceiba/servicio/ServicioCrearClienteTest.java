@@ -5,21 +5,22 @@ import org.mockito.Mockito;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.excepcion.ExcepcionDuplicidad;
-import com.ceiba.modelo.entidad.Producto;
-import com.ceiba.puerto.repositorio.RepositorioProducto;
-import com.ceiba.testdatabuilder.ProductoTestDataBuilder;
+import com.ceiba.modelo.entidad.Cliente;
+import com.ceiba.puerto.repositorio.RepositorioCliente;
+import com.ceiba.testdatabuilder.ClienteTestDataBuilder;
 
 public class ServicioCrearClienteTest {
 
 	@Test
 	public void validarExistenciaPrevia() {
-		//Arrange
-		Producto producto = new ProductoTestDataBuilder().build();
-		RepositorioProducto repositorioProducto = Mockito.mock(RepositorioProducto.class);
-		Mockito.when(repositorioProducto.existe(Mockito.any())).thenReturn(true);
-		//Act
-		ServicioCrearProducto servicioCrearProducto = new ServicioCrearProducto(repositorioProducto);
-		//Assert
-		BasePrueba.assertThrows(() -> servicioCrearProducto.ejecutar(producto), ExcepcionDuplicidad.class,"El producto ya existe en el sistema");
+		// Arrange
+		Cliente cliente = new ClienteTestDataBuilder().build();
+		RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
+		Mockito.when(repositorioCliente.existe(Mockito.any())).thenReturn(true);
+		// Act
+		ServicioCrearCliente servicioCrearCliente = new ServicioCrearCliente(repositorioCliente);
+		// Assert
+		BasePrueba.assertThrows(() -> servicioCrearCliente.ejecutar(cliente), ExcepcionDuplicidad.class,
+				"El cliente ya existe en el sistema");
 	}
 }

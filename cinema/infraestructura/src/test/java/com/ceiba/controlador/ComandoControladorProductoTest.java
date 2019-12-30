@@ -22,20 +22,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ComandoControladorProductoTest {
 
 	@Autowired
-    private ObjectMapper objectMapper;
+	private ObjectMapper objectMapper;
 
-    @Autowired
-    private MockMvc mocMvc;
+	@Autowired
+	private MockMvc mocMvc;
 
-    @Test
-    public void crear() throws Exception{
-        // arrange
-        ComandoProducto comandoProducto = new ComandoProductoTestDataBuilder().build();
+	@Test
+	public void crear() throws Exception {
+		// arrange
+		ComandoProducto comandoProducto = new ComandoProductoTestDataBuilder().build();
 
-        // act - assert
-      //  mocMvc.perform(post("/productos")
-        //        .contentType(MediaType.APPLICATION_JSON_UTF8);
-            //    .content(objectMapper.writeValueAsString(comandoProducto)))
-        	//	.andExpect(status().isOk());
-    }
+		// act - assert
+		mocMvc.perform(post("/productos").contentType(MediaType.APPLICATION_JSON_UTF8)
+				.content(objectMapper.writeValueAsString(comandoProducto))).andExpect(status().isOk());
+	}
 }

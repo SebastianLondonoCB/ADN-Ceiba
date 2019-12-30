@@ -13,7 +13,7 @@ public class ComandoProductoTestDataBuilder {
 	private Double precioCompra;
 	
 	public ComandoProductoTestDataBuilder() {
-		this.codigo = "01";
+		this.codigo = "02";
 		this.descripcion = "ESTUCHE SILI CONCASE VERDE";
 		this.grupo = "ESTUCHES";
 		this.ivaVenta = 19;

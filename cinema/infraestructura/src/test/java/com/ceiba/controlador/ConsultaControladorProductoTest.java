@@ -20,18 +20,15 @@ import org.springframework.test.web.servlet.MockMvc;
 @ComponentScan("com.ceiba")
 public class ConsultaControladorProductoTest {
 
-    @Autowired
-    private MockMvc mocMvc;
-    
-    @Test 
-    public void listar() throws Exception{
-        // arrange
+	@Autowired
+	private MockMvc mocMvc;
 
-        // act - assert
-    	mocMvc.perform(get("/productos")
-    		      .contentType(MediaType.APPLICATION_JSON))
-    		      .andExpect(status().isOk());
-    	//	      .andExpect(jsonPath("$", hasSize(1)))
-    		//      .andExpect(jsonPath("$[0].nombre", is("batman")));
-    }
+	@Test
+	public void listar() throws Exception {
+		// arrange
+
+		// act - assert
+		mocMvc.perform(get("/productos").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+				.andExpect(jsonPath("$", hasSize(1))).andExpect(jsonPath("$[0].codigo", is("01")));
+	}
 }

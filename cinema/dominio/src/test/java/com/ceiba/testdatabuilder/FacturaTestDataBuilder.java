@@ -2,6 +2,7 @@ package com.ceiba.testdatabuilder;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,29 +30,33 @@ public class FacturaTestDataBuilder {
 
 		Date fechaFactura = null;
 		try {
-			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("27/12/2019");
+			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("29/12/2019");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
 		Date fechaVencimiento = null;
 		try {
-			fechaVencimiento = new SimpleDateFormat("dd/MM/yyyy").parse("30/12/2019");
+			fechaVencimiento = new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2019");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
+		List<DtoDetalleFactura> listado = new ArrayList<DtoDetalleFactura>();
+		listado.add(new DtoDetalleFactura("FACT-1", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 0, 0.0, 20000.0,
+				16000.0, 4000.0));
+
 		this.idFactura = "FACT-1";
-		this.identificacionCliente = "1040756785";
+		this.identificacionCliente = "1010";
 		this.fechaFactura = fechaFactura;
-		this.plazoFactura = 3;
+		this.plazoFactura = 2;
 		this.fechaVencimiento = fechaVencimiento;
 		this.subtotalFactura = 20000.0;
 		this.ivaFactura = 0.0;
 		this.descuentosFactura = 0.0;
 		this.totalFactura = 20000.0;
 		this.utilidadFactura = 4000.0;
-		this.detalleFactura = null;
+		this.detalleFactura = listado;
 	}
 
 	public FacturaTestDataBuilder conIdFactura(String idFactura) {
@@ -101,6 +106,11 @@ public class FacturaTestDataBuilder {
 
 	public FacturaTestDataBuilder conUtilidadFactura(Double utilidadFactura) {
 		this.utilidadFactura = utilidadFactura;
+		return this;
+	}
+
+	public FacturaTestDataBuilder conDetalleFactura(List<DtoDetalleFactura> detalleFactura) {
+		this.detalleFactura = detalleFactura;
 		return this;
 	}
 
