@@ -1,0 +1,13 @@
+<br>
+<nav style="text-align: center;">
+  <button routerLink="./listar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Listar clientes</button>
+
+  <button routerLink="./crear" routerLinkActive="active" 
+    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Crear cliente</button>
+
+  <button routerLink="./borrar" routerLinkActive="active"
+    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Borrar cliente</button>
+</nav>
+<br>
+<router-outlet></router-outlet>
