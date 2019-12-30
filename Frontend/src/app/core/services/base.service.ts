@@ -52,8 +52,6 @@ export class BaseService {
     protected doGet<T>(serviceUrl: string, opts?: Options): Observable<T> {
         const ropts = this.createOptions(opts);
 
-alert(serviceUrl);
-
         return this.http.get(serviceUrl, ropts).pipe(
             map(response => response as T)
         );
