@@ -31,14 +31,14 @@ public class FacturaDataStore {
 		try {
 			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("27/12/2019");
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.err.println(e);
 		}
 		
 		Date fechaVencimiento = null;
 		try {
 			fechaVencimiento = new SimpleDateFormat("dd/MM/yyyy").parse("30/12/2019");
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.err.println(e);
 		}
 				
 		List<DtoDetalleFactura> listado = new ArrayList<DtoDetalleFactura>(); 
