@@ -7,7 +7,8 @@ import java.util.Date;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
-
+import java.util.logging.Level; 
+import java.util.logging.Logger; 
 import org.springframework.stereotype.Component;
 
 import com.ceiba.modelo.dto.DtoCliente;
@@ -20,6 +21,7 @@ import com.ceiba.modelo.entidad.Cliente;
 @Component
 public class TerceroDataStore {
 
+	static Logger logger = Logger.getLogger(TerceroDataStore.class.getName()); 
 	private static ConcurrentHashMap<String,Cliente> terceros;
 
 	static {
@@ -29,7 +31,7 @@ public class TerceroDataStore {
 		try {
 			fechaNacimiento = new SimpleDateFormat("dd/MM/yyyy").parse("27/06/1998");
 		} catch (ParseException e) {
-			e.printStackTrace();
+			logger.log(Level.INFO, "Error en la fecha de nacimiento"); 
 		} 
 				
 		terceros.put(UUID.randomUUID().toString(),new Cliente("1040756785", "Cédula de ciudadania", "Sebastian", "Londono Zapata", "VIP",

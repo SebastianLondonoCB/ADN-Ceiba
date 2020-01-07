@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
@@ -24,6 +26,7 @@ import com.ceiba.modelo.entidad.Factura;
 @Component
 public class FacturaDataStore {
 
+	static Logger logger = Logger.getLogger(FacturaDataStore.class.getName()); 
 	private static ConcurrentHashMap<String, Factura> facturas;
 
 	static {
@@ -31,14 +34,14 @@ public class FacturaDataStore {
 		try {
 			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("27/12/2019");
 		} catch (ParseException e) {
-			System.err.println(e);
+			logger.log(Level.INFO, "Error en la fecha de factura"); 
 		}
 		
 		Date fechaVencimiento = null;
 		try {
 			fechaVencimiento = new SimpleDateFormat("dd/MM/yyyy").parse("30/12/2019");
 		} catch (ParseException e) {
-			System.err.println(e);
+			logger.log(Level.INFO, "Error en la fecha de vencimiento"); 
 		}
 				
 		List<DtoDetalleFactura> listado = new ArrayList<DtoDetalleFactura>(); 
