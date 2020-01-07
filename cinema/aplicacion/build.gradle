@@ -25,3 +25,9 @@ configurations {
 		extendsFrom annotationProcessor
 	}
 }
+
+test {
+     afterSuite {suite, result ->
+         result.exception?.PrintStackTrace ()
+     }
+}

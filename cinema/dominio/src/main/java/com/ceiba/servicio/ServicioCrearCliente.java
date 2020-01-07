@@ -15,14 +15,14 @@ public class ServicioCrearCliente {
 	}
 	
 	public void ejecutar(Cliente tercero) {
-		validarExistenciaPrevia(tercero);
+	//	validarExistenciaPrevia(tercero);
 		this.repositorioTercero.crear(tercero);
 	}
 
 	private void validarExistenciaPrevia(Cliente tercero) {
-		boolean existe = this.repositorioTercero.existe(tercero);
+		/*boolean existe = this.repositorioTercero.existe(tercero);
 		if(existe) {
 			throw new ExcepcionDuplicidad(EL_TERCERO_YA_EXISTE_EN_EL_SISTEMA);
-		}
+		}*/
 	}
 }
