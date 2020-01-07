@@ -8,6 +8,8 @@ import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     ClienteRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ClienteModule { }

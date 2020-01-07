@@ -1,0 +1,15 @@
+#tituloTabla {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#botonGuardar {
+    width: 120px;
+    height: 45px;
+}
+
+#botonCancelar {
+    height: 45px;
+    width: 120px;
+    margin-left: 5px;
+}

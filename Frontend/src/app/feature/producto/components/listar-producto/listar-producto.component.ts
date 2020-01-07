@@ -16,7 +16,7 @@ export class ListarProductoComponent implements OnInit {
   ngOnInit() {
     this.productoService.consultar()
     .subscribe(data=>{
-      this.productos=data;
+      this.productos=data as Producto[];
     })
   }
 }

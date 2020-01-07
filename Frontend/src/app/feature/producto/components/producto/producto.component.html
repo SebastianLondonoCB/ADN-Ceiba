@@ -1,13 +1,15 @@
 <br>
-<nav style="text-align: center;">
-  <button routerLink="./listar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Listar productos</button>
 
-  <button routerLink="./crear" routerLinkActive="active" 
-    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Crear producto</button>
+<div class="container">
+  <nav style="text-align: center;">
+  <!-- <button routerLink="./listar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Listar productos</button>-->
 
-  <button routerLink="./borrar" routerLinkActive="active"
-    (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Borrar producto</button>
-</nav>
+    <button id="botonRegistrar" routerLink="./crear" routerLinkActive="active" 
+      (click)="Nuevo()" class="btn btn-info">Registrar producto</button>
+  </nav>
+</div>
+
+<br>
 <br>
 <router-outlet></router-outlet>

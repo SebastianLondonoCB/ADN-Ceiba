@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  //endpoint: '/agw-ayv/'
-  endpoint: 'http://localhost:55755/facturacion'
+  endpoint: 'http://localhost:59453/facturacion'
 };
 
 /*
