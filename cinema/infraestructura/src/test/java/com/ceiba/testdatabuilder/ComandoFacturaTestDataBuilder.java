@@ -32,7 +32,7 @@ public class ComandoFacturaTestDataBuilder {
 
 		Date fechaFactura = null;
 		try {
-			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("29/12/2019");
+			fechaFactura = new SimpleDateFormat("dd/MM/yyyy").parse("28/12/2019");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -45,10 +45,10 @@ public class ComandoFacturaTestDataBuilder {
 		}
 
 		List<DtoDetalleFactura> listado = new ArrayList<DtoDetalleFactura>();
-		listado.add(new DtoDetalleFactura("FACT-2", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 20000.0, 0, 0.0, 20000.0,
+		listado.add(new DtoDetalleFactura("FACT-22555", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 20000.0, 0, 0.0, 20000.0,
 				16000.0, 4000.0));
 
-		this.idFactura = "FACT-2";
+		this.idFactura = "FACT-22555";
 		this.identificacionCliente = "1010";
 		this.fechaFactura = fechaFactura;
 		this.plazoFactura = 2;

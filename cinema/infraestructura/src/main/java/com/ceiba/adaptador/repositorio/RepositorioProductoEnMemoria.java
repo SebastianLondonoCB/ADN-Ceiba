@@ -20,14 +20,14 @@ public class RepositorioProductoEnMemoria implements RepositorioProducto {
 	}
 
 	@Override
-	public void crear(Producto producto) {
-		productoDataStore.put(producto);
-	}
-	
-	@Override
 	public void modificar(Producto producto) {
 		productoDataStore.update(producto);
 	}
+	
+	@Override
+	public void crear(Producto producto) {
+		productoDataStore.put(producto);
+	}	
 
 	@Override
 	public boolean existe(Producto producto) {

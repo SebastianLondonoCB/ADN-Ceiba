@@ -23,7 +23,7 @@ public class ComandoClienteTestDataBuilder {
 		this.identificacion = "1040756786";
 		this.tipoIdentificacion = "Cedula de ciudadania";
 		this.nombre = "Sebastian";
-		this.apellidos = "Londoño Zapata";
+		this.apellidos = "Zapata";
 		this.tipoCliente = "V.I.P";
 		this.telefono = "3104368735";
 		this.email = "sebastianlondonozapata@gmail.com";
