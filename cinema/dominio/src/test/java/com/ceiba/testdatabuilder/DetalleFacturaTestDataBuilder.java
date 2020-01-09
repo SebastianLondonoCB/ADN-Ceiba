@@ -10,6 +10,7 @@ public class DetalleFacturaTestDataBuilder {
 	private String descripcionProducto;
 	private Double precioUnitario;
 	private Double cantidad;
+	private Double subtotal;
 	private Integer porcentajeIva;
 	private Double precioIva;
 	private Double precioTotal;
@@ -22,6 +23,7 @@ public class DetalleFacturaTestDataBuilder {
 		this.descripcionProducto = "ESTUCHE SILI CONCASE VERDE";
 		this.precioUnitario = 20000.0;
 		this.cantidad = 1.0;
+		this.subtotal = 20000.0;
 		this.porcentajeIva = 0;
 		this.precioIva = 0.0;
 		this.precioTotal = 20000.0;
@@ -53,6 +55,11 @@ public class DetalleFacturaTestDataBuilder {
 		this.cantidad = cantidad;
 		return this;
 	}
+	
+	public DetalleFacturaTestDataBuilder conSubtotal(Double subtotal) {
+		this.subtotal = subtotal;
+		return this;
+	}
 
 	public DetalleFacturaTestDataBuilder conPorcentajeIva(Integer porcentajeIva) {
 		this.porcentajeIva = porcentajeIva;
@@ -80,7 +87,7 @@ public class DetalleFacturaTestDataBuilder {
 	}
 
 	public DetalleFactura build() {
-		return new DetalleFactura(idFactura, codigoProducto, descripcionProducto, precioUnitario, cantidad,
+		return new DetalleFactura(idFactura, codigoProducto, descripcionProducto, precioUnitario, cantidad, subtotal,
 				porcentajeIva, precioIva, precioTotal, precioCompra, utilidad);
 	}
 }

@@ -11,6 +11,16 @@ export class ProductoService extends BaseService {
 
   constructor(protected http: HttpClient) { super(http); }
 
+  private producto: Producto;
+
+  setProducto (producto: Producto) {
+    this.producto = producto;
+  }
+
+  getProducto () {
+    return this.producto;
+  }
+
   public consultarCache() {
     return this.doGet<Producto[]>(`${environment.endpoint}productos/productos`, this.optsNameCache('consultar productos con cache'));
   }
@@ -23,7 +33,7 @@ export class ProductoService extends BaseService {
     return this.doPost<Producto, boolean>(`${environment.endpoint}/productos`, producto, this.optsName('crear/actualizar productos'));
   }
 
-  public eliminar(producto: Producto) {
-    return this.doPost<Producto, boolean>(`${environment.endpoint}/productos`, producto, this.optsName('eliminar productos'));
+  public eliminar(codigo: String) {
+    return this.doDelete<Producto, boolean>(`${environment.endpoint}/productos/`, codigo, this.optsName('eliminar productos'));
   }
 }

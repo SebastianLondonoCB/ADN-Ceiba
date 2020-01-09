@@ -23,7 +23,7 @@ public class DetalleFacturaDataStore {
 	static {
 		detalleFacturas = new ConcurrentHashMap<>();
 		detalleFacturas.put(UUID.randomUUID().toString(),
-				new DetalleFactura("FACT-1", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 0, 0.0, 20000.0, 16000.0, 4000.0));
+				new DetalleFactura("FACT-1", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 20000.0, 0, 0.0, 20000.0, 16000.0, 4000.0));
 	}
 
 	public Collection<DetalleFactura> get() {
@@ -34,8 +34,8 @@ public class DetalleFacturaDataStore {
 		return detalleFacturas.values().stream()
 				.map(detalleFactura -> new DtoDetalleFactura(detalleFactura.getIdFactura(), detalleFactura.getCodigoProducto(),
 						detalleFactura.getDescripcionProducto(), detalleFactura.getPrecioUnitario(), detalleFactura.getCantidad(),
-						detalleFactura.getPorcentajeIva(), detalleFactura.getPrecioIva(), detalleFactura.getPrecioTotal(),
-						detalleFactura.getPrecioCompra(), detalleFactura.getUtilidad()))
+						detalleFactura.getSubtotal(), detalleFactura.getPorcentajeIva(), detalleFactura.getPrecioIva(), 
+						detalleFactura.getPrecioTotal(), detalleFactura.getPrecioCompra(), detalleFactura.getUtilidad()))
 				.collect(Collectors.toList());
 	}
 

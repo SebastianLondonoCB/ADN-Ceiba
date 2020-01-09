@@ -65,6 +65,14 @@ export class BaseService {
         );
     }
 
+    protected doPut<T, R>(serviceUrl: string, body: T, opts?: Options): Observable<R> {
+        const ropts = this.createOptions(opts);
+
+        return this.http.put(serviceUrl, body, ropts).pipe(
+            map(response => response as R)
+        );
+    }
+
     protected doGetParameters<T>(serviceUrl: string, parametros: URLSearchParams, opts?: Options): Observable<T> {
         const ropts = this.createOptions(opts);
         const options = parametros !== null ? {
@@ -74,6 +82,15 @@ export class BaseService {
 
         return this.http.get(serviceUrl, ropts).pipe(
             map(response => response as T)
+        );
+    }
+
+    protected doDelete<T, R>(serviceUrl: string, body: String, opts?: Options): Observable<R> {
+        const ropts = this.createOptions(opts);
+
+        alert(serviceUrl + body);
+        return this.http.delete(serviceUrl + body).pipe(
+            map(response => response as R)
         );
     }
 }

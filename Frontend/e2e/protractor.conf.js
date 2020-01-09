@@ -11,7 +11,8 @@ var HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './src/**/*.e2e-spec.ts'
+    './src/specs/crear-facturas-spec.ts'
+    //'./src/specs/crear-clientes-spec.ts', './src/specs/crear-productos-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome'

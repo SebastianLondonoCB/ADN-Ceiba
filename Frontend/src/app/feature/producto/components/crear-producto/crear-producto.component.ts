@@ -12,16 +12,29 @@ import { Router } from '@angular/router';
 })
 export class CrearProductoComponent implements OnInit {
 
+  private accion: string;
+  private accionBoton: string;
   private producto: Producto;
   private productoFormulario: FormGroup;
   private error:string;
+  private editando: boolean;
 
   constructor(private formBuilder: FormBuilder, protected productoService: ProductoService,
      private router:Router) { }
 
   ngOnInit() {
     
-    //this.producto = this.productoService.getCurrentProduct();
+    this.accion = "REGISTRAR";
+    this.accionBoton = "Guardar";
+    this.editando = false;
+
+    this.producto = this.productoService.getProducto();
+    if(this.producto != null) {
+      this.accion = "MODIFICAR";
+      this.accionBoton = "Modificar";
+      this.editando = true;
+    } 
+
     this.error = "";
 
     if (this.producto == undefined || this.producto.codigo == undefined)
@@ -31,11 +44,13 @@ export class CrearProductoComponent implements OnInit {
       codigo: [this.producto.codigo, Validators.required],
       descripcion: [this.producto.descripcion, Validators.required],
       grupo: [this.producto.grupo, ''],
-
       ivaVenta: [this.producto.ivaVenta == 0 ? '' : this.producto.ivaVenta, Validators.required],
       precioVenta: [this.producto.precioVenta == 0 ? '' : this.producto.precioVenta, Validators.required],
       precioCompra: [this.producto.precioCompra == 0 ? '' : this.producto.precioCompra, Validators.required],
     })
+
+     
+
   }
 
   get AddProductoFormCtrl() {
@@ -43,6 +58,7 @@ export class CrearProductoComponent implements OnInit {
   }
 
   guardar() {
+
     if (this.productoFormulario.invalid) {
       return;
     }
@@ -56,12 +72,23 @@ export class CrearProductoComponent implements OnInit {
       precioCompra: this.AddProductoFormCtrl.precioCompra.value,
     }
 
-    this.productoService.guardar(this.producto).subscribe(data => {
-      alert("Producto registrado con exito");
-      this.ListarProductos();
-    },
-      error => this.error = error.error.message
-    );
+    if(this.editando) {
+
+      alert("como se dijo")
+      this.productoService.modificar(this.producto).subscribe(data => {
+        alert("Producto modificado con exito");
+        this.ListarProductos();
+      },
+        error => this.error = error.error.message
+      );
+    } else {
+      this.productoService.guardar(this.producto).subscribe(data => {
+        alert("Producto registrado con exito");
+        this.ListarProductos();
+      },
+        error => this.error = error.error.message
+      );
+    }
   }
 
   ListarProductos() {

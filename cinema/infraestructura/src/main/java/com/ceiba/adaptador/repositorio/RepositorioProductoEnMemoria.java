@@ -23,9 +23,16 @@ public class RepositorioProductoEnMemoria implements RepositorioProducto {
 	public void crear(Producto producto) {
 		productoDataStore.put(producto);
 	}
+	
+	@Override
+	public void modificar(Producto producto) {
+		productoDataStore.update(producto);
+	}
 
 	@Override
 	public boolean existe(Producto producto) {
 		return productoDataStore.get().stream().anyMatch(fila -> fila.getCodigo().equals(producto.getCodigo()));
 	}
+
+
 }

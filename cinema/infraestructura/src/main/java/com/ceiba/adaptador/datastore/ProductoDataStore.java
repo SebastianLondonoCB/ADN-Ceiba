@@ -38,4 +38,9 @@ public class ProductoDataStore {
 	public void put(Producto producto) {
 		productos.put(UUID.randomUUID().toString(), producto);
 	}
+	
+	public void update(Producto producto) {
+		productos.remove(UUID.randomUUID().toString(), producto);
+		productos.put(UUID.randomUUID().toString(), producto);
+	}
 }

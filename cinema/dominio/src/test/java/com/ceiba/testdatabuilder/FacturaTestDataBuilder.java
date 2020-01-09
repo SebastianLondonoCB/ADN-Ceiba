@@ -43,7 +43,7 @@ public class FacturaTestDataBuilder {
 		}
 
 		List<DtoDetalleFactura> listado = new ArrayList<DtoDetalleFactura>();
-		listado.add(new DtoDetalleFactura("FACT-1", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 0, 0.0, 20000.0,
+		listado.add(new DtoDetalleFactura("FACT-1", "01", "ESTUCHE SILI CONCASE VERDE", 20000.0, 1.0, 20000.0, 0, 0.0, 20000.0,
 				16000.0, 4000.0));
 
 		this.idFactura = "FACT-1";

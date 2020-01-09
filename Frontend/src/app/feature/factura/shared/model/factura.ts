@@ -1,7 +1,7 @@
 import { DetalleFactura } from './detalleFactura';
 
 export class Factura {
-    idFactura: string;
+    idFactura: number;
 	identificacionCliente: string;
 	fechaFactura: Date;
     plazoFactura: number;

@@ -11,7 +11,8 @@ public class FabricaDetalleFactura {
 	public DetalleFactura crear(ComandoDetalleFactura comandoDetalleFactura) {		
 		return new DetalleFactura(comandoDetalleFactura.getIdFactura(), comandoDetalleFactura.getCodigoProducto(), 
 				comandoDetalleFactura.getDescripcionProducto(), comandoDetalleFactura.getPrecioUnitario(),
-				comandoDetalleFactura.getCantidad(), comandoDetalleFactura.getPorcentajeIva(), comandoDetalleFactura.getPrecioIva(),
-				comandoDetalleFactura.getPrecioTotal(), comandoDetalleFactura.getPrecioCompra(), comandoDetalleFactura.getUtilidad());
+				comandoDetalleFactura.getCantidad(), comandoDetalleFactura.getSubtotal(), comandoDetalleFactura.getPorcentajeIva(), 
+				comandoDetalleFactura.getPrecioIva(), comandoDetalleFactura.getPrecioTotal(), comandoDetalleFactura.getPrecioCompra(), 
+				comandoDetalleFactura.getUtilidad());
 	}
 }

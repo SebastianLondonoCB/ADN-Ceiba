@@ -19,6 +19,7 @@ public class DetalleFactura {
 	private String descripcionProducto;
 	private Double precioUnitario;
 	private Double cantidad;
+	private Double subtotal;
 	private Integer porcentajeIva;
 	private Double precioIva;
 	private Double precioTotal;
@@ -26,7 +27,7 @@ public class DetalleFactura {
 	private Double utilidad;
 
 	public DetalleFactura(String idFactura, String codigoProducto, String descripcionProducto, Double precioUnitario,
-			Double cantidad, Integer porcentajeIva, Double precioIva, Double precioTotal, Double precioCompra,
+			Double cantidad, Double subtotal, Integer porcentajeIva, Double precioIva, Double precioTotal, Double precioCompra,
 			Double utilidad) {
 		
 		ValidadorArgumento.validarObligatorio(idFactura, EL_ID_DE_FACTURA_ES_UN_DATO_OBLIGATORIO);
@@ -43,6 +44,7 @@ public class DetalleFactura {
 		this.descripcionProducto = descripcionProducto;
 		this.precioUnitario = precioUnitario;
 		this.cantidad = cantidad;
+		this.subtotal = subtotal;
 		this.porcentajeIva = porcentajeIva;
 		this.precioIva = precioIva;
 		this.precioTotal = precioTotal;
@@ -68,6 +70,10 @@ public class DetalleFactura {
 
 	public Double getCantidad() {
 		return cantidad;
+	}
+	
+	public Double getSubtotal() {
+		return subtotal;
 	}
 
 	public Integer getPorcentajeIva() {

@@ -1,5 +1,5 @@
 export class DetalleFactura {
-	idFactura: string;
+	idFactura: number;
 	codigoProducto: string;
 	descripcionProducto: string;
 	precioUnitario: number;

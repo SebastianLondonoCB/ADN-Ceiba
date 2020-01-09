@@ -14,6 +14,7 @@ public class ComandoDetalleFactura {
 	private String descripcionProducto;
 	private Double precioUnitario;
 	private Double cantidad;
+	private Double subtotal;
 	private Integer porcentajeIva;
 	private Double precioIva;
 	private Double precioTotal;

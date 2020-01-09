@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CrearFacturaComponent } from './components/crear-factura/crear-factura.component';
 import { ListarFacturaComponent } from './components/listar-factura/listar-factura.component';
+import { CrearFacturaComponent } from './components/crear-factura/crear-factura.component';
 import { FacturaComponent } from './components/factura/factura.component';
 
 const routes: Routes = [

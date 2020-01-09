@@ -16,4 +16,11 @@ public interface RepositorioProducto {
 	 * @return si existe o no
 	 */
 	boolean existe(Producto producto);
+	
+	/**
+	 * Permite determinar si previamente se registro la pelicula
+	 * @param pelicula
+	 * @return si existe o no
+	 */
+	void modificar(Producto producto);
 }

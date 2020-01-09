@@ -7,7 +7,7 @@ import com.ceiba.puerto.repositorio.RepositorioProducto;
 public class ServicioCrearProducto {
 
 	private static final String EL_PRODUCTO_YA_EXISTE_EN_EL_SISTEMA = "El producto ya existe en el sistema";
-	
+		
 	private RepositorioProducto repositorioProducto;
 	
 	public ServicioCrearProducto(RepositorioProducto repositorioProducto) {

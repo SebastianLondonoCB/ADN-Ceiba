@@ -34,7 +34,7 @@ public class TerceroDataStore {
 			logger.log(Level.INFO, "Error en la fecha de nacimiento"); 
 		} 
 				
-		terceros.put(UUID.randomUUID().toString(),new Cliente("1040756785", "Cédula de ciudadania", "Sebastian", "Londono Zapata", "VIP",
+		terceros.put(UUID.randomUUID().toString(),new Cliente("00000", "Cédula de ciudadania", "Ventas", "de contado", "VIP",
 				"3104368735", "sebastianlondonozapata@gmail.com", fechaNacimiento));
 	} 
 	

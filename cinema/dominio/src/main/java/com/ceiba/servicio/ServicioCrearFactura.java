@@ -24,6 +24,8 @@ public class ServicioCrearFactura {
 	}
 
 	public void ejecutar(Factura factura) {
+		validarClienteYFormaPago(factura);
+		validarDiaDescanso(factura);
 		validarExistenciaPrevia(factura);
 		this.repositorioFactura.crear(factura);
 	}
@@ -48,7 +50,7 @@ public class ServicioCrearFactura {
 	public void validarClienteYFormaPago(Factura factura) {
 		String idCliente = factura.getIdentificacionCliente();
 		Integer diasPlazo = factura.getPlazoFactura();
-		if (diasPlazo > 0 && idCliente.equals("1010")) {
+		if (diasPlazo > 0 && idCliente.equals("00000")) {
 			throw new ExcepcionReglasNegocio(NO_SE_PUEDE_REALIZAR_LA_FACTURA_A_CLIENTES_NO_REGISTRADOS);
 		}
 	}
